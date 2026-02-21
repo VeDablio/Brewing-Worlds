@@ -35,7 +35,13 @@
   },
   "name":"NONE JAM 12",
   "resources":[
+    {"id":{"name":"obj_cam","path":"objects/obj_cam/obj_cam.yy",},},
+    {"id":{"name":"obj_cup","path":"objects/obj_cup/obj_cup.yy",},},
+    {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
+    {"id":{"name":"scr_globals","path":"scripts/scr_globals/scr_globals.yy",},},
+    {"id":{"name":"spr_bench","path":"sprites/spr_bench/spr_bench.yy",},},
+    {"id":{"name":"spr_cup","path":"sprites/spr_cup/spr_cup.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
