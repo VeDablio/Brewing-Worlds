@@ -1,4 +1,7 @@
 global.current_area = 0;
+global.held_item = noone;
+global.held_world = noone;
+global.held_sprite = noone;
 
 #region Ingredientes
 

@@ -1,7 +1,8 @@
 mixer_contents	= [];
 max_ingredients	= 3;
+final_drink = noone;
 
-mixer_state = "shaking";
+mixer_state = "waiting";
 
 shake_progress	= 0;
 shake_target	= 100;
