@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_spawner",
+  "%Name":"obj_item_base",
   "eventList":[],
   "managed":true,
-  "name":"obj_spawner",
+  "name":"obj_item_base",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -27,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_frame",
-    "path":"sprites/spr_frame/spr_frame.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
