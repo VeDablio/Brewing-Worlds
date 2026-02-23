@@ -37,7 +37,6 @@
   "resources":[
     {"id":{"name":"obj_cabinet","path":"objects/obj_cabinet/obj_cabinet.yy",},},
     {"id":{"name":"obj_cam","path":"objects/obj_cam/obj_cam.yy",},},
-    {"id":{"name":"obj_cup","path":"objects/obj_cup/obj_cup.yy",},},
     {"id":{"name":"obj_item_base","path":"objects/obj_item_base/obj_item_base.yy",},},
     {"id":{"name":"obj_mixer","path":"objects/obj_mixer/obj_mixer.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
