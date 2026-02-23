@@ -1,7 +1,57 @@
+#region Variaveis Globais
+
 global.current_area	= 0;
 global.held_item	= noone;
 global.held_world	= noone;
 global.held_sprite	= noone;
+
+global.correct_recipes		= 0;
+global.correct_deliveries	= 0
+global.current_score		= 0;
+global.daily_quota			= 500;
+global.combo_multiplier		= 1.0;
+global.combo_max			= 2.5;
+
+#endregion
+
+#region Função para adicionar pontos
+
+global.add_score = function(_speed_mult){
+	var _base			= global.correct_deliveries + global.correct_deliveries;
+	var _points_to_add	= (_base) * _speed_mult * global.combo_multiplier;
+	
+	global.current_score += _points_to_add;
+	
+	global.combo_multiplier = min(global.combo_multiplier + 0.1, global.combo_max);
+	
+	show_debug_message("Entrega concluida! Pontos ganhos: " + string(_base));
+}
+
+#endregion
+
+#region Função para Resetar o Combo
+
+global.reset_combo = function(){
+	global.combo_multiplier = 1.0;
+	show_debug_message("Combo quebrado!");
+}
+
+#endregion
+
+#region Função de Calcular Velocidade
+
+calculate_speed_mult = function(){
+		var _patience_ratio = patience_current / patience_max;
+		var _speed_mult = 1.0;
+		
+		if(_patience_ratio >= 0.6){
+			_speed_mult = 2.0;
+		}else if(_patience_ratio <= 0.3){
+			_speed_mult = 0.5
+		}
+}
+
+#endregion
 
 #region Ingredientes
 

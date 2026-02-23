@@ -18,7 +18,7 @@ switch(state){
 		show_debug_message(order_id);
 		
 		if(patience_current <= 0){
-			// Resetar combo
+			global.reset_combo();
 			state = "leaving";
 		}
 	break;
