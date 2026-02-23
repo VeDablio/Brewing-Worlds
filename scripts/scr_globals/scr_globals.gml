@@ -28,7 +28,7 @@ global.item_database = {
 			sprite_index	: spr_item_base
 		},
 	
-		barry_syrup: {
+		berry_syrup: {
 			display_name	: "Xarope de Frutas Vermelhas",
 			world_type		: 0,
 			sprite_index	: spr_item_base
@@ -234,6 +234,9 @@ function check_recipe(){
 	array_copy(_sorted_mixer, 0, mixer_contents, 0, array_length(mixer_contents)); // Copiando
 	array_sort(_sorted_mixer, true);												// Organizando
 	
+	show_debug_message("--- INICIANDO CHECAGEM DE RECEITA ---");
+    show_debug_message("Itens no Mixer: " + string(_sorted_mixer));
+	
 	// Criando uma variavel para saber qual receita foi feita
 	var _found_recipe = noone;
 	
@@ -248,6 +251,8 @@ function check_recipe(){
 		var _sorted_recipe = [];
 		array_copy(_sorted_recipe, 0, _recipe.ingredients, 0, array_length(_recipe.ingredients));	// Copiando
 		array_sort(_sorted_recipe, true);															// Organizando
+		
+		show_debug_message("Comparando com [" + _key + "]: " + string(_sorted_recipe));
 		
 		// Verificando se os itens no mixer são os mesmos da receita do item i
 		if(array_equals(_sorted_mixer, _sorted_recipe)){
@@ -273,6 +278,20 @@ function check_recipe(){
 		// O drinque foi estragado
 		final_drink = "Ruined Drink"
 	}
+	
+	show_debug_message("--- FIM DA CHECAGEM ---");
 };
+
+#endregion
+
+#region Função de Escolher Pedido
+
+function select_order(){
+	var _recipe_list	= variable_struct_get_names(global.all_recipes[$ world_type]);
+	var _index			= irandom(array_length(_recipe_list) - 1);
+	
+	order_id		= _recipe_list[_index];
+	order_sprite	= global.all_recipes[$ world_type][$ order_id].sprite_result;
+}
 
 #endregion

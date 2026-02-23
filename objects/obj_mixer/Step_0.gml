@@ -1,6 +1,6 @@
 // Debug para saber se os itens estão entrando corretamente no mixer
 if(mixer_state == "waiting"){
-	show_debug_message(mixer_contents)
+	//show_debug_message(mixer_contents)
 };
 
 // Se o estado for "shaking" (misturando)
