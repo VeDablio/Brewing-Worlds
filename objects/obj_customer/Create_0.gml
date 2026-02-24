@@ -1,11 +1,11 @@
-state		= "walking";
-world_type	= "living";
+state		= "walking";	// Estado do cliente
+world_type	= "living";		// Mundo do cliente
 
-order_id		= "";
-order_sprite	= noone;
+order_id		= "";		// Qual pedido ele quer
+order_sprite	= noone;	// Qual é a sprite do pedido
 
-patience_max		= 1200;
-patience_current	= patience_max;
+patience_max		= 1200;			// Maximo de tempo que ele espera
+patience_current	= patience_max;	// Contador de espera
 
-target_x	= 320;
-move_spd	= 2;
+target_x	= 320;	// X alvo do cliente
+move_spd	= 2;	// Velocidade de movimento do cliente

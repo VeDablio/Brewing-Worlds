@@ -25,12 +25,16 @@ global.combo_max			= 2.5;
 
 #region Função para adicionar pontos
 
-global.add_score = function(_speed_mult){
+global.add_score = function(_speed_mult){ // Precisa receber do valor do multiplicador de velocidade
+	// Pontos base = valor de receitas corretas + valor de entregas corretas
 	var _base			= global.correct_deliveries + global.correct_deliveries;
+	// Pontos a adicionar = (Pontos base) * multiplicador de velocidade * multiplicador de combo
 	var _points_to_add	= (_base) * _speed_mult * global.combo_multiplier;
 	
+	// Adicionando os pontos ganhos ao pontos atuais
 	global.current_score += _points_to_add;
 	
+	// Aumentando o multiplicador de combo
 	global.combo_multiplier = min(global.combo_multiplier + 0.1, global.combo_max);
 	
 	show_debug_message("Entrega concluida! Pontos ganhos: " + string(_base));
@@ -41,6 +45,7 @@ global.add_score = function(_speed_mult){
 #region Função para Resetar o Combo
 
 global.reset_combo = function(){
+	// Resetando o valor do combo
 	global.combo_multiplier = 1.0;
 	show_debug_message("Combo quebrado!");
 }
@@ -50,14 +55,21 @@ global.reset_combo = function(){
 #region Função de Calcular Velocidade
 
 calculate_speed_mult = function(){
-		var _patience_ratio = patience_current / patience_max;
-		var _speed_mult = 1.0;
+	// Taxa de paciencia = paciencia atua / paciencia maxima
+	var _patience_ratio = patience_current / patience_max;
+	// Definindo uma valor padrão para o multiplicador de velocidade
+	var _speed_mult = 1.0;
+	
+	// Se a taxa de paciencia for maior que 60%
+	if(_patience_ratio >= 0.6){
+		// Multiplicador de velocidade é 2x 
+		_speed_mult = 2.0;
 		
-		if(_patience_ratio >= 0.6){
-			_speed_mult = 2.0;
-		}else if(_patience_ratio <= 0.3){
-			_speed_mult = 0.5
-		}
+	// Se a taxa de paciencia for abaixo de 30%
+	}else if(_patience_ratio <= 0.3){
+		// O multiplicador de velocidade é 0.5x
+		_speed_mult = 0.5
+	}
 }
 
 #endregion
@@ -354,10 +366,14 @@ function check_recipe(){
 #region Função de Escolher Pedido
 
 function select_order(){
+	// Pegando a lista de receitas baseada no mundo que o cliente está
 	var _recipe_list	= variable_struct_get_names(global.all_recipes[$ world_type]);
+	// Selecionando uma das receitas aleatoriamente
 	var _index			= irandom(array_length(_recipe_list) - 1);
 	
+	// Definindo qual é a receita escolhida
 	order_id		= _recipe_list[_index];
+	// Definindo qual é a sprite da receita
 	order_sprite	= global.all_recipes[$ world_type][$ order_id].sprite_result;
 }
 
@@ -366,14 +382,20 @@ function select_order(){
 #region Função de Liberar Vaga
 
 function release_slot(){
-
+	// Se o cliente estiver em alguma vaga
 	if(slot_id != -1){
+		// Se o mundo que ele está for o mundo dos vivos
 		if(world_type == "living"){
+			// Libera a vaga na array do mundo dos vivos
 			global.slots_living[slot_id] = false
+		
+		// Se for o mundo dos mortos
 		}else{
+			// Libera a vaga na array do mundo dos mortos
 			global.slots_dead[slot_id] = false;
 		}
 		
+		// Define que o cliente está sem vaga
 		slot_id = -1;
 	}
 

@@ -1,3 +1,4 @@
+// Barra de progresso do dia
 if(day_timer > 0){
 	var _bar_w	= 640;
 	var _bar_h	= 5;
@@ -15,12 +16,14 @@ if(global.held_sprite != noone){
 	draw_sprite(global.held_sprite, 0, _my_x, _my_y);
 }
 
+// Texto para informar como resetar
 draw_set_halign(1);
 draw_set_valign(1);
 draw_set_font(fnt_score);
 if(game_state == "finished"){
+	var _stats = (day_result == "win") ? "Você venceu!" : "Você perdeu";
 	var _text = "Aperte ENTER para reiniciar";
-	draw_text(320, 180, _text);
+	draw_text(320, 180, _stats + "\n" + _text);
 }
 draw_set_halign(-1);
 draw_set_valign(-1);
