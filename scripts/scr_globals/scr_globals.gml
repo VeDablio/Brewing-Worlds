@@ -88,37 +88,37 @@ global.item_database = {
 		cachaca: {
 			display_name	: "Cachaça",
 			world_type		: 0,
-			sprite_index	: spr_item_base
+			sprite_index	: spr_cachaca
 		},
 	
 		sparkling_water: {
 			display_name	: "Água Gaseficada",
 			world_type		: 0,
-			sprite_index	: spr_item_base
+			sprite_index	: spr_sparkling_water
 		},
 	
 		lemon_soda: {
 			display_name	: "Refrigerante de Limão",
 			world_type		: 0,
-			sprite_index	: spr_item_base
+			sprite_index	: spr_lemon_soda
 		},
 	
 		berry_syrup: {
 			display_name	: "Xarope de Frutas Vermelhas",
 			world_type		: 0,
-			sprite_index	: spr_item_base
+			sprite_index	: spr_berry_syrup
 		},
 	
 		honey: {
 			display_name	: "Mel",
 			world_type		: 0,
-			sprite_index	: spr_item_base
+			sprite_index	: spr_honey
 		},
 	
 		mint: {
 			display_name	: "Hortelã",
 			world_type		: 0,
-			sprite_index	: spr_item_base
+			sprite_index	: spr_mint
 		},
 		
 		empty_glass: {
@@ -136,41 +136,41 @@ global.item_database = {
 		formaldehyde: {
 			display_name	: "Formol",
 			world_type		: 1,
-			sprite_index	: spr_item_base
+			sprite_index	: spr_formaldehyde
 		},
 	
 		swamp_water: {
 			display_name	: "Água do Pantano",
 			world_type		: 1,
-			sprite_index	: spr_item_base
+			sprite_index	: spr_swamp_water
 		},
 
 	
 		sulfuric_acid: {
 			display_name	: "Ácido Sulfúrico",
 			world_type		: 1,
-			sprite_index	: spr_item_base
+			sprite_index	: spr_sulfuric_acid
 		},
 
 	
 		coagulated_blood: {
 			display_name	: "Sangue Coagulado",
 			world_type		: 1,
-			sprite_index	: spr_item_base
+			sprite_index	: spr_coagulated_blood
 		},
 
 	
 		dragon_bile: {
 			display_name	: "Bile de Dragão",
 			world_type		: 1,
-			sprite_index	: spr_item_base
+			sprite_index	: spr_dragon_bile
 		},
 
 	
 		hamlock: {
 			display_name	: "Cicuta",
 			world_type		: 1,
-			sprite_index	: spr_item_base
+			sprite_index	: spr_hamlock
 		},
 		
 		rusted_chalice: {
