@@ -12,7 +12,7 @@ if(state == "waiting"){
 		global.held_sprite	= noone;
 		
 		show_debug_message("Era isso que eu queria")
-		state = "leaving"
+		state = "leaving";
 	}else if(global.held_item != noone){
 		global.correct_recipes		= max(0, global.correct_recipes - 5);
 		global.correct_deliveries	= max(0, global.correct_deliveries - 5);

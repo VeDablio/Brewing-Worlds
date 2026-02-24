@@ -15,7 +15,7 @@ switch(state){
 	
 	case "waiting":
 		patience_current--;
-		show_debug_message(order_id);
+		//show_debug_message(order_id);
 		
 		if(patience_current <= 0){
 			global.reset_combo();
@@ -25,6 +25,7 @@ switch(state){
 	
 	case "leaving":
 		x -= move_spd;
+		release_slot();
 		if(x <= -128) instance_destroy();
 	break;
 }

@@ -1,10 +1,15 @@
 #region Variaveis Globais
 
+#region Receitas
+
 global.current_area	= 0;
 global.held_item	= noone;
 global.held_world	= noone;
 global.held_sprite	= noone;
 
+#endregion
+
+#region Pontuação
 global.correct_recipes		= 0;
 global.correct_deliveries	= 0
 global.current_score		= 0;
@@ -13,6 +18,10 @@ global.combo_multiplier		= 1.0;
 global.combo_max			= 2.5;
 
 #endregion
+
+#endregion
+
+#region Funções de Pontuação
 
 #region Função para adicionar pontos
 
@@ -52,6 +61,10 @@ calculate_speed_mult = function(){
 }
 
 #endregion
+
+#endregion
+
+#region Drinques
 
 #region Ingredientes
 
@@ -334,6 +347,10 @@ function check_recipe(){
 
 #endregion
 
+#endregion
+
+#region Clientes
+
 #region Função de Escolher Pedido
 
 function select_order(){
@@ -343,5 +360,25 @@ function select_order(){
 	order_id		= _recipe_list[_index];
 	order_sprite	= global.all_recipes[$ world_type][$ order_id].sprite_result;
 }
+
+#endregion
+
+#region Função de Liberar Vaga
+
+function release_slot(){
+
+	if(slot_id != -1){
+		if(world_type == "living"){
+			global.slots_living[slot_id] = false
+		}else{
+			global.slots_dead[slot_id] = false;
+		}
+		
+		slot_id = -1;
+	}
+
+}
+
+#endregion
 
 #endregion

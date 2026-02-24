@@ -9,7 +9,7 @@ draw_set_font(0);
 draw_text(40, _text_y, string(floor(global.current_score)))
 
 draw_set_halign(1);
-draw_text(320, _text_y, "QUOTA: " + string(global.daily_quota));
+draw_text(320, _text_y, "META: " + string(global.daily_quota));
 
 draw_set_halign(2);
 var _combo_color = (global.combo_multiplier > 1.0) ? c_orange: c_white;
