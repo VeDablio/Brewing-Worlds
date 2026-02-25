@@ -36,6 +36,9 @@ if(mixer_state == "shaking"){
 	if(shake_progress >= shake_target){
 		// O estado do mixerr é "finished" (finalizado)
 		mixer_state = "finished";
+		
+		image_xscale = 1.5;
+		image_yscale = 1.5;
 		// Verifica qual receita foi feita
 		check_recipe();
 	}

@@ -1,3 +1,3 @@
 text	= "";
 alpha	= 1;
-color	= c_white;
+y -= 20

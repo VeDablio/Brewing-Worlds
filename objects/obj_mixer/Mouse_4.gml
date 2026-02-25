@@ -6,8 +6,8 @@ if(global.held_item != noone && mixer_state == "waiting"){
 		// Adiciona o item que estava sendo segurado ao mixer
 		array_push(mixer_contents, global.held_item)
 		
-		image_xscale = .8;
-		image_yscale = .8;
+		image_xscale = .7;
+		image_yscale = .7;
 		
 		// Reseta as informações de item segurado
 		global.held_item	= noone;
@@ -45,12 +45,12 @@ if(mixer_state == "finished" && _is_holding_container){
 		// Definindo a sprite com base no mundo e drinque feito
 		global.held_sprite = global.all_recipes[$ _world][$ final_drink].sprite_result;
 		
-		var _popup	= instance_create_layer(x, y - 20, "Effects", obj_score_popup);
+		var _popup	= instance_create_layer(x, y - 32, "Effects", obj_score_popup);
 		_popup.text	= "+" + string(global.correct_recipes) + " Bonus de receita";
 	}
 	
-	image_xscale = 1.2;
-	image_yscale = 1.2;
+	image_xscale = 1.3;
+	image_yscale = 1.3;
 	
 	// Resetando as informações de drinque do mixer
 	mixer_state		= "waiting";
