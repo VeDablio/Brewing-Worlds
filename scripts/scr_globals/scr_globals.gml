@@ -54,7 +54,7 @@ global.reset_combo = function(){
 
 #region Função de Calcular Velocidade
 
-calculate_speed_mult = function(){
+function calculate_speed_mult(){
 	// Taxa de paciencia = paciencia atua / paciencia maxima
 	var _patience_ratio = patience_current / patience_max;
 	// Definindo uma valor padrão para o multiplicador de velocidade
@@ -197,42 +197,42 @@ global.all_recipes = {
 			ingredients		: ["cachaca", "lemon_soda", "mint"],
 			display_name	: "Caipirinha de Repouso",
 			world_type		: 0,
-			sprite_result	: spr_cup
+			sprite_result	: spr_restful_caipirinha
 		},
 		
 		morning_dew:{
 			ingredients		: ["sparkling_water", "berry_syrup", "honey"],
 			display_name	: "Orvalho do amanhecer",
 			world_type		: 0,
-			sprite_result	: spr_cup
+			sprite_result	: spr_morning_dew
 		},
 		
 		vitality_pulse:{
 			ingredients		: ["cachaca", "berry_syrup", "mint"],
 			display_name	: "Pulso de Vitalidade",
 			world_type		: 0,
-			sprite_result	: spr_cup
+			sprite_result	: spr_vitality_pulse
 		},
 		
 		golden_breeze:{
 			ingredients		: ["sparkling_water", "lemon_soda", "honey"],
 			display_name	: "Brisa Dourada",
 			world_type		: 0,
-			sprite_result	: spr_cup
+			sprite_result	: spr_golden_breeze
 		},
 		
 		forest_freshness:{
 			ingredients		: ["lemon_soda", "berry_syrup", "mint"],
 			display_name	: "Frescor da Floresta",
 			world_type		: 0,
-			sprite_result	: spr_cup
+			sprite_result	: spr_forest_freshness
 		},
 		
 		breath_of_life:{
 			ingredients		: ["cachaca", "sparkling_water", "honey"],
 			display_name	: "Sopro de Vida",
 			world_type		: 0,
-			sprite_result	: spr_cup
+			sprite_result	: spr_breath_of_life
 		},
 		
 	},
