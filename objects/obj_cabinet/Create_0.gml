@@ -1,0 +1,1 @@
+sprite_index = (world_type == "living") ? spr_cabinet_living : spr_cabinet_dead

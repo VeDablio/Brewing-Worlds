@@ -2,6 +2,9 @@ mixer_contents	= [];		// Array de itens colocados no mixer
 max_ingredients	= 3;		// Máximo de itens para colocar no mixer
 final_drink		= noone;	// Drinque feito
 
+home_y	= y;
+home_x	= x;
+
 mixer_state = "waiting";	// Estágio do mixer, padrão definido como "waiting" (esperando)
 
 shake_progress	= 0;		// Progresso de mistura do drinque

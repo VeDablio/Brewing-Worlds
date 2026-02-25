@@ -8,3 +8,7 @@ if(global.current_area == 0){
 	hud_y			= gui_height - hud_height;	// O Y será a altura da GUI menos a altura da hud (desenha na parte inferior da tela)
 	sprite_index	= spr_hud_dead;				// A sprite é a sprite da hud do mundo dos mortos
 }
+
+if(keyboard_check_pressed(ord("R"))){
+	show_recipes = !show_recipes;
+};

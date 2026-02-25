@@ -6,6 +6,9 @@ if(global.held_item != noone && mixer_state == "waiting"){
 		// Adiciona o item que estava sendo segurado ao mixer
 		array_push(mixer_contents, global.held_item)
 		
+		image_xscale = .8;
+		image_yscale = .8;
+		
 		// Reseta as informações de item segurado
 		global.held_item	= noone;
 		global.held_world	= noone;
@@ -31,15 +34,23 @@ if(mixer_state == "finished" && _is_holding_container){
 	// Se o drinque feito for o drinque estragado
 	if(final_drink == "Ruined Drink"){
 		// A sprite segurada se torna o drinque estragado
-		global.held_sprite = spr_cup // Mudar para sprite de bebida arruinada
+		global.held_sprite = spr_ruinned_drink_living
 		
 	// Caso o drinque não seja o estragado
 	}else{
+		// Aumenta pontos base de receitas corretas
+		global.correct_recipes		+= 5;
 		// Descobrindo em qual mundo o player está
 		var _world = (global.current_area == 0) ? "living" : "dead";
 		// Definindo a sprite com base no mundo e drinque feito
 		global.held_sprite = global.all_recipes[$ _world][$ final_drink].sprite_result;
+		
+		var _popup	= instance_create_layer(x, y - 20, "Effects", obj_score_popup);
+		_popup.text	= "+" + string(global.correct_recipes) + " Bonus de receita";
 	}
+	
+	image_xscale = 1.2;
+	image_yscale = 1.2;
 	
 	// Resetando as informações de drinque do mixer
 	mixer_state		= "waiting";

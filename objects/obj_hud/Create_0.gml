@@ -7,3 +7,5 @@ hud_height = sprite_get_height(spr_hud_living);
 
 gui_height	= 360;	// Salvando a altura da GUI
 hud_y		= 0;	// Definindo um Y para a hud
+
+show_recipes	= false;

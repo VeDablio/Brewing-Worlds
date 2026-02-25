@@ -70,6 +70,8 @@ function calculate_speed_mult(){
 		// O multiplicador de velocidade é 0.5x
 		_speed_mult = 0.5
 	}
+	
+	return 1.0
 }
 
 #endregion
@@ -243,7 +245,7 @@ global.all_recipes = {
 	
 	dead:{
 		rigor_mortis:{
-			ingredients		: ["formaldehyde", "sulfuric_acid", "hemlock"],
+			ingredients		: ["formaldehyde", "sulfuric_acid", "hamlock"],
 			display_name	: "Rigor Mortis",
 			world_type		: 1,
 			sprite_result	: spr_cup
@@ -257,7 +259,7 @@ global.all_recipes = {
 		},
 		
 		widows_embrace:{
-			ingredients		: ["formaldehyde", "coagulated_blood", "hemlock"],
+			ingredients		: ["formaldehyde", "coagulated_blood", "hamlock"],
 			display_name	: "Abraço de Viúva",
 			world_type		: 1,
 			sprite_result	: spr_cup
@@ -271,7 +273,7 @@ global.all_recipes = {
 		},
 		
 		swamp_shriek:{
-			ingredients		: ["sulfuric_acid", "coagulated_blood", "hemlock"],
+			ingredients		: ["sulfuric_acid", "coagulated_blood", "hamlock"],
 			display_name	: "Grito do Pântano",
 			world_type		: 1,
 			sprite_result	: spr_cup

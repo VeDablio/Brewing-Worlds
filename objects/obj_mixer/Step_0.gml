@@ -1,3 +1,6 @@
+image_xscale = lerp(image_xscale, 1, .2);
+image_yscale = lerp(image_yscale, 1, .2);
+
 // Debug para saber se os itens estão entrando corretamente no mixer
 if(mixer_state == "waiting"){
 	//show_debug_message(mixer_contents)
@@ -37,3 +40,10 @@ if(mixer_state == "shaking"){
 		check_recipe();
 	}
 };
+
+if(mixer_state == "finished"){
+	y = home_y;
+	if(x >= 640 || x <= 0){
+		x = home_x;
+	}
+}

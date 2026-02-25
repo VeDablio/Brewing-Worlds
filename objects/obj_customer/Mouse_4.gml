@@ -4,7 +4,6 @@ if(state == "waiting"){
 	// Se o item entregue for o mesmo do pedido
 	if(global.held_item == order_id){
 		global.correct_deliveries	+= 5;	// Aumenta pontos base de entrega corretas
-		global.correct_recipes		+= 5;	// Aumenta pontos base de receitas corretas
 		
 		// Pegando a o multi baseado na velocidade de entrega 
 		var _speed_multi = calculate_speed_mult()
