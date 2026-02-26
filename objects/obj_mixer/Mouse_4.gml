@@ -23,7 +23,7 @@ if(global.held_item != noone && mixer_state == "waiting"){
 };
 
 // Definindo uma variavel para saber se tem algum recipiente sendo segurado
-var _is_holding_container = (global.held_item == "empty_glass" || global.held_item == "rusted_chalice")
+var _is_holding_container = (global.held_item == "empty_glass" || global.held_item == "big_flask")
 
 // Se o estado do mixer for "finished" (finalizado) e está segurando algum recipiente
 if(mixer_state == "finished" && _is_holding_container){
@@ -34,7 +34,11 @@ if(mixer_state == "finished" && _is_holding_container){
 	// Se o drinque feito for o drinque estragado
 	if(final_drink == "Ruined Drink"){
 		// A sprite segurada se torna o drinque estragado
-		global.held_sprite = spr_ruinned_drink_living
+		if(global.current_area == 0){
+			global.held_sprite = spr_ruinned_drink_living;
+		}else{
+			global.held_sprite = spr_ruinned_drink_dead;
+		}
 		
 	// Caso o drinque não seja o estragado
 	}else{

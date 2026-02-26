@@ -175,10 +175,10 @@ global.item_database = {
 			sprite_index	: spr_hamlock
 		},
 		
-		rusted_chalice: {
+		big_flask: {
 			display_name	: "Cálice Enferrujado",
 			world_type		: 1,
-			sprite_index	: spr_cup
+			sprite_index	: spr_big_flask
 		}
 	},
 		
@@ -248,42 +248,42 @@ global.all_recipes = {
 			ingredients		: ["formaldehyde", "sulfuric_acid", "hamlock"],
 			display_name	: "Rigor Mortis",
 			world_type		: 1,
-			sprite_result	: spr_cup
+			sprite_result	: spr_rigor_mortis
 		},
 		
 		putrid_sludge:{
 			ingredients		: ["swamp_water", "coagulated_blood", "dragon_bile"],
 			display_name	: "Lamaçal Putrefato",
 			world_type		: 1,
-			sprite_result	: spr_cup
+			sprite_result	: spr_putrid_sludge
 		},
 		
 		widows_embrace:{
 			ingredients		: ["formaldehyde", "coagulated_blood", "hamlock"],
 			display_name	: "Abraço de Viúva",
 			world_type		: 1,
-			sprite_result	: spr_cup
+			sprite_result	: spr_widows_embrace
 		},
 		
 		corrosive_bile:{
 			ingredients		: ["swamp_water", "sulfuric_acid", "dragon_bile"],
 			display_name	: "Bile Corrosivo",
 			world_type		: 1,
-			sprite_result	: spr_cup
+			sprite_result	: spr_corrosive_bile
 		},
 		
 		swamp_shriek:{
 			ingredients		: ["sulfuric_acid", "coagulated_blood", "hamlock"],
 			display_name	: "Grito do Pântano",
 			world_type		: 1,
-			sprite_result	: spr_cup
+			sprite_result	: spr_swamp_shriek
 		},
 		
 		last_gasp:{
 			ingredients		: ["formaldehyde", "swamp_water", "dragon_bile"],
 			display_name	: "Último Suspiro",
 			world_type		: 1,
-			sprite_result	: spr_cup
+			sprite_result	: spr_last_gasp
 		},
 		
 	},
