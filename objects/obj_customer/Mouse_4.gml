@@ -18,6 +18,13 @@ if(state == "waiting"){
 		global.held_sprite	= noone;
 		global.held_world	= noone;
 		
+		var _popup	= instance_create_layer(x, y - 32, "Effects", obj_score_popup);
+		_popup.text	= "+" + string(global.correct_deliveries) + " Bônus de entrega";
+		_popup.cor	= c_yellow; 
+		
+		image_xscale	= 1.3;
+		image_yscale	= 1.3;
+		
 		show_debug_message("Era isso que eu queria")
 		// Muda o estado para "saindo"
 		state = "leaving";
@@ -34,6 +41,12 @@ if(state == "waiting"){
 		global.held_sprite	= noone;
 		global.held_world	= noone;
 		
+		var _sound	= (audio_play_sound(snd_wrong, 5, 0));
+		
+		var _random_pitch	= random_range(0.8, 1.2);
+		audio_sound_pitch(_sound, _random_pitch);
+		
+		image_angle = choose(15, -15)
 		show_debug_message("Não era isso que eu queria")
 		
 		// Muda o estado para "saindo"

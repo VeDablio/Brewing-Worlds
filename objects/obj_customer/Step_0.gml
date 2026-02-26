@@ -1,3 +1,7 @@
+image_xscale	= lerp(image_xscale, 1, .2);
+image_yscale	= lerp(image_yscale, 1, .2);
+image_angle		= lerp(image_angle, 1, .2)
+
 #region Máquina de estados
 
 switch(state){

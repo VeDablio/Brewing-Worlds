@@ -14,6 +14,11 @@ if(global.held_item != noone && mixer_state == "waiting"){
 		global.held_world	= noone;
 		global.held_sprite	= noone;
 		
+		var _sound	= audio_play_sound(snd_set_item, 5, 0);
+		
+		var _pitch	= random_range(0.8, 1.2);
+		audio_sound_pitch(_sound, _pitch);
+		
 		// Se a array estiver com todos os espaços preenchidos
 		if(array_length(mixer_contents) == max_ingredients){
 			// O estao do mixer se torna "shaking" (misturando)
@@ -40,6 +45,10 @@ if(mixer_state == "finished" && _is_holding_container){
 			global.held_sprite = spr_ruinned_drink_dead;
 		}
 		
+		var _sound	= audio_play_sound(snd_wrong_recipe, 5, 0);
+		
+		var _pitch	= random_range(0.8, 1.2);
+		audio_sound_pitch(_sound, _pitch);
 	// Caso o drinque não seja o estragado
 	}else{
 		// Aumenta pontos base de receitas corretas
@@ -50,7 +59,13 @@ if(mixer_state == "finished" && _is_holding_container){
 		global.held_sprite = global.all_recipes[$ _world][$ final_drink].sprite_result;
 		
 		var _popup	= instance_create_layer(x, y - 32, "Effects", obj_score_popup);
-		_popup.text	= "+" + string(global.correct_recipes) + " Bonus de receita";
+		_popup.text	= "+" + string(global.correct_recipes) + " Bônus de receita";
+		_popup.cor	= c_yellow; 
+		
+		var _sound	= audio_play_sound(snd_correct_recipe, 5, 0);
+		
+		var _pitch	= random_range(0.8, 1.2);
+		audio_sound_pitch(_sound, _pitch);
 	}
 	
 	image_xscale = 1.3;

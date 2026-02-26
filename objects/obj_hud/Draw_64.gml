@@ -4,7 +4,7 @@
 draw_sprite(sprite_index, 0, 0, hud_y);
 
 // Definindo fonte de alinhamento vertical
-draw_set_font(fnt_score);
+draw_set_font(fnt_text);
 draw_set_valign(1);
 
 // Posição Y do texto é o centro da sprie da hud
@@ -56,7 +56,7 @@ if(show_recipes){
 	var _world_items	= global.item_database[$ _world_key];
 	
 	draw_set_colour(c_green);
-	draw_rectangle(300, 50, 640, 300, false);
+	draw_rectangle(280, 50, 640, 300, false);
 	
 	draw_set_colour(c_white)
 	
@@ -70,11 +70,11 @@ if(show_recipes){
 		
 		var _yy	= 80 + (i * 32);
 		if(struct_exists(_data, "sprite_result")){
-			draw_sprite_ext(_data.sprite_result, 0, 320, _yy, .5, .5, 0, c_white, 1);
+			draw_sprite_ext(_data.sprite_result, 0, 300, _yy, .5, .5, 0, c_white, 1);
 		}
 		
 		draw_set_halign(0)
-		draw_text(340, _yy, string(_data.display_name));
+		draw_text(320, _yy, string(_data.display_name));
 		
 		var _ing_array		= _data.ingredients;
 		var _start_x		= 520;
@@ -98,7 +98,7 @@ if(show_recipes){
 		}
 	}
 	draw_set_halign(fa_center);
-    draw_text(480, 280, "Press 'R' to close");
+    draw_text(470, 280, "Press 'R' to close");
 }
 
 #endregion

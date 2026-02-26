@@ -40,6 +40,11 @@ if(mixer_state == "shaking"){
 		image_xscale = 1.5;
 		image_yscale = 1.5;
 		// Verifica qual receita foi feita
+		
+		var _sound	= audio_play_sound(snd_mixer_ready, 5, 0);
+		
+		var _pitch	= random_range(0.8, 1.2);
+		audio_sound_pitch(_sound, _pitch);
 		check_recipe();
 	}
 };
