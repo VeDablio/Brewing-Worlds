@@ -45,10 +45,7 @@ if(mixer_state == "finished" && _is_holding_container){
 			global.held_sprite = spr_ruinned_drink_dead;
 		}
 		
-		var _sound	= audio_play_sound(snd_wrong_recipe, 5, 0);
-		
-		var _pitch	= random_range(0.8, 1.2);
-		audio_sound_pitch(_sound, _pitch);
+		audio_play_sound(snd_wrong_recipe, 5, 0);
 	// Caso o drinque não seja o estragado
 	}else{
 		// Aumenta pontos base de receitas corretas
@@ -62,10 +59,7 @@ if(mixer_state == "finished" && _is_holding_container){
 		_popup.text	= "+" + string(global.correct_recipes) + " Bônus de receita";
 		_popup.cor	= c_yellow; 
 		
-		var _sound	= audio_play_sound(snd_correct_recipe, 5, 0);
-		
-		var _pitch	= random_range(0.8, 1.2);
-		audio_sound_pitch(_sound, _pitch);
+		audio_play_sound(snd_correct_recipe, 5, 0);
 	}
 	
 	image_xscale = 1.3;

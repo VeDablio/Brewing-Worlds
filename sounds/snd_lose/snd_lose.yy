@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"snd_sfx_3",
+  "%Name":"snd_lose",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -12,7 +12,7 @@
   "conversionMode":0,
   "duration":1.5,
   "exportDir":"",
-  "name":"snd_sfx_3",
+  "name":"snd_lose",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_sfx_3.wav",
+  "soundFile":"snd_lose.wav",
   "volume":1.0,
 }

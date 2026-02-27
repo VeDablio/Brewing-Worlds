@@ -1,5 +1,5 @@
 image_xscale = lerp(image_xscale, 1, .2);
-image_yscale = lerp(image_yscale, 1, .2);
+image_yscale = lerp(image_yscale, target_yscale, .2);
 
 // Debug para saber se os itens estão entrando corretamente no mixer
 if(mixer_state == "waiting"){

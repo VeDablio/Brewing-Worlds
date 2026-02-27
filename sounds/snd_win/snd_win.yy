@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"snd_sfx_4",
+  "%Name":"snd_win",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -12,7 +12,7 @@
   "conversionMode":0,
   "duration":1.5,
   "exportDir":"",
-  "name":"snd_sfx_4",
+  "name":"snd_win",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_sfx_4.wav",
+  "soundFile":"snd_win.wav",
   "volume":1.0,
 }

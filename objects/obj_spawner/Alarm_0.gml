@@ -28,14 +28,17 @@ if(_my_slot != -1){
 	
 	// Se o mundo for dos vivos o Y de spawn do cliente será 180, se o mundo for dos morto o Y será 540
 	var _spawn_y	= (_world_choice == 0) ? 180 : 540;
+	
+	var _yscale	= (_world_choice == 0) ? 1 : -1;
 	// Criando o cliente
 	var _inst		= instance_create_layer(-62, _spawn_y, "Customers", obj_customer);
 	
 	// No cliente criado
 	with(_inst){
-		world_type	= _world_name;			// Passa para ele qual o mundo ele está
-		slot_id		= _my_slot;				// Passa para ele qual é o lugar dele
-		target_x	= _x_array[_my_slot];	// Passa para ele o X do lugar dele
+		world_type		= _world_name;			// Passa para ele qual o mundo ele está
+		slot_id			= _my_slot;				// Passa para ele qual é o lugar dele
+		target_x		= _x_array[_my_slot];	// Passa para ele o X do lugar dele
+		target_yscale	= _yscale; 
 	}
 };
 

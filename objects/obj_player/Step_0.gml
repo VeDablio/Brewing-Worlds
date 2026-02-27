@@ -40,13 +40,15 @@ if(game_state == "playing"){
 		if(global.current_score >= global.daily_quota){
 			// O resultado do dia é vitoria
 			day_result = "win";
+			audio_play_sound(snd_win, 5, 0);
 			show_debug_message("Vitória! Meta atingida")
 		
 		// Caso a pontuação não seja maior ou igual a meta
 		}else{
 			// O resultado do dia é derrota
 			day_result = "lose";
-			show_debug_message("Derrota! Meta atingida")
+			audio_play_sound(snd_lose, 5, 0)
+			show_debug_message("Derrota! Meta não atingida")
 		}
 	}
 
@@ -58,7 +60,7 @@ if(game_state == "playing"){
 		if(day_result == "win"){
 			// Aumentar dia, quota e clientes maximos
 			game_restart();	// Jogo recomeça
-			
+
 		// Caso o resultado não seja vitoria
 		}else{
 			// Fazer animação de derrota

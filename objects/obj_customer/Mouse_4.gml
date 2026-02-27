@@ -6,7 +6,8 @@ if(state == "waiting"){
 		global.correct_deliveries	+= 5;	// Aumenta pontos base de entrega corretas
 		
 		// Pegando a o multi baseado na velocidade de entrega 
-		var _speed_multi = calculate_speed_mult()
+		var _speed_multi		= calculate_speed_mult()
+		global.current_speed	= _speed_multi;
 		
 		// Chama a função de adicionar pontuação
 		global.add_score(_speed_multi);
@@ -35,6 +36,7 @@ if(state == "waiting"){
 		global.correct_deliveries	= max(0, global.correct_deliveries - 5);	// Diminui os pontos base de entregas corretas
 		
 		global.reset_combo();	// Reseta o combo
+		global.current_speed	= 1
 		
 		// Reseta o que está sendo segurado
 		global.held_item	= noone;

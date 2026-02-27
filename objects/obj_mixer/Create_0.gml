@@ -12,3 +12,5 @@ shake_target	= 100;		// Alvo do progresso de mistura
 last_mouse_x	= mouse_x;	// Salvando a última posição do mouse
 shake_threshold	= 20;		// O quanto precisa mexer o mouse para contar progresso;
 last_direction	= 0;		// Salvando a última direção do mouse
+
+target_yscale	= image_yscale;

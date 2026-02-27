@@ -15,13 +15,21 @@ draw_set_halign(0);
 draw_text(40, _text_y, string(floor(global.current_score)))
 
 // Desenhando a meta no centro da hud
+var _combo_color = (global.combo_multiplier > 1.0) ? c_orange: c_white;	// Se o combo aumentar, a cor do texto é laranja
+var _base = global.correct_deliveries + global.correct_recipes;
+
+draw_set_halign(2);
+draw_text_colour(270, _text_y, "Base: " + string(_base) + " X ", _combo_color, _combo_color, _combo_color, _combo_color, 1);
+
 draw_set_halign(1);
-draw_text(320, _text_y, "META: " + string(global.daily_quota));
+draw_text_colour(320, _text_y, "Multi: " + string(global.combo_multiplier) + " X ", _combo_color, _combo_color, _combo_color, _combo_color, 1);
+
+draw_set_halign(0);
+draw_text_colour(360, _text_y, "Combo: " + string(global.combo_multiplier), _combo_color, _combo_color, _combo_color, _combo_color, 1);
 
 // Desenhando o combo de velocidade na direita do hud
 draw_set_halign(2);
-var _combo_color = (global.combo_multiplier > 1.0) ? c_orange: c_white;	// Se o combo aumentar, a cor do texto é laranja
-draw_text_colour(600, _text_y, "MULTI: " + string(global.combo_multiplier) + "x", _combo_color, _combo_color, _combo_color, _combo_color, 1)
+draw_text(600, _text_y, "META: " + string(global.daily_quota));
 
 #endregion
 
@@ -55,8 +63,8 @@ if(show_recipes){
 	var _world_key = (global.current_area == 0) ? "living" : "dead";
 	var _world_items	= global.item_database[$ _world_key];
 	
-	draw_set_colour(c_green);
-	draw_rectangle(280, 50, 640, 300, false);
+	draw_set_colour(c_maroon);
+	draw_rectangle(280, 60, 640, 290, false);
 	
 	draw_set_colour(c_white)
 	
@@ -98,7 +106,7 @@ if(show_recipes){
 		}
 	}
 	draw_set_halign(fa_center);
-    draw_text(470, 280, "Press 'R' to close");
+    draw_text(470, 270, "Press 'R' to close");
 }
 
 #endregion

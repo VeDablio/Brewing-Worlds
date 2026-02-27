@@ -14,6 +14,7 @@ global.correct_recipes		= 0;
 global.correct_deliveries	= 0
 global.current_score		= 0;
 global.daily_quota			= 500;
+global.current_speed		= 1;
 global.combo_multiplier		= 1.0;
 global.combo_max			= 2.5;
 
