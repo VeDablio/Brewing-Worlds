@@ -19,6 +19,7 @@ if(global.held_sprite != noone){
 // Texto para informar como resetar
 draw_set_halign(1);
 draw_set_valign(1);
+draw_set_font(fnt_text);
 if(game_state == "finished"){
 	var _stats = (day_result == "win") ? "Você venceu!" : "Você perdeu";
 	var _text = "Aperte ENTER para reiniciar";
