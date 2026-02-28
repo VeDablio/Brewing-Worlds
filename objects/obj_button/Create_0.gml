@@ -1,4 +1,6 @@
-button_text	= "Jogar";
-action		= "play";
+sprite_index = sprite;
+
+button_text	= "";
+action		= "";
 
 target_scale	= 1;

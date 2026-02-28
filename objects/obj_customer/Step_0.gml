@@ -10,6 +10,9 @@ switch(state){
 	
 	// Caso seja "esperando"
 	case "walking":
+	
+		sprite_index = (world_type == "living") ? spr_customer_living_full : spr_customer_dead_full;
+		
 		// Se o valor positivo do X menos o alvo X for maior que velocidade de movimento
 		// Ou seja, se a distancia do X até o alvo X for maior que a velocidade de movimento
 		if(abs(x - target_x) > move_spd){
@@ -41,6 +44,18 @@ switch(state){
 	
 	// Caso seja "esperando"
 	case "waiting":
+		
+		var _patience_ratio = patience_current / patience_max;
+		
+		if(_patience_ratio <= 0.3){
+			sprite_index = (world_type == "living") ? spr_customer_living_tired : spr_customer_dead_tired;
+		}else if(_patience_ratio <= 0.6){
+			sprite_index = (world_type == "living") ? spr_customer_living_half : spr_customer_dead_half;
+		}else{
+			sprite_index = (world_type == "living") ? spr_customer_living_full : spr_customer_dead_full;
+		}
+		
+		
 		// Diminui a paciencia atual
 		patience_current--;
 		//show_debug_message(order_id);
@@ -49,6 +64,7 @@ switch(state){
 		if(patience_current <= 0){
 			global.reset_combo();	// Reseta o combo
 			state = "leaving";		// O estado se torna "saindo"
+			sprite_index = (world_type == "living") ? spr_customer_living_angry : spr_customer_dead_angry;
 		}
 	break;
 	

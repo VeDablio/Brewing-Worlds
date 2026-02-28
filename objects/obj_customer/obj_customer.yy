@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_customer",
-    "path":"sprites/spr_customer/spr_customer.yy",
+    "name":"spr_customer_living_full",
+    "path":"sprites/spr_customer_living_full/spr_customer_living_full.yy",
   },
   "spriteMaskId":null,
   "visible":true,

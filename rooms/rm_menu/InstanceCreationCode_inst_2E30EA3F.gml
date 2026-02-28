@@ -1,2 +1,2 @@
 button_text	= "TUTORIAL";
-actin		= "tutorial";
+action		= "tutorial";

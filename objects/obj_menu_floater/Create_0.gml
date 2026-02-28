@@ -1,8 +1,10 @@
-var _world_names			= variable_struct_get_names(global.all_recipes);
+var _struct					= choose(global.all_recipes, global.item_database);
+
+var _world_names			= variable_struct_get_names(_struct);
 var _random_world_index		= irandom(array_length(_world_names) - 1);
 var _chosen_world			= _world_names[_random_world_index];
 
-var _world_struct			= global.all_recipes[$ _chosen_world];
+var _world_struct			= _struct[$ _chosen_world];
 
 var _recipe_names			= variable_struct_get_names(_world_struct);
 var _random_recipe_index	= irandom(array_length(_recipe_names) - 1);
@@ -10,7 +12,7 @@ var _choose_recipe_name		= _recipe_names[_random_recipe_index];
 
 var _recipe_data			= _world_struct[$ _choose_recipe_name];
 
-sprite_index	= _recipe_data.sprite_result;
+sprite_index	= (_struct == global.all_recipes) ? _recipe_data.sprite_result : _recipe_data.sprite_index;
 
 speed		= random_range(1, 3);
 direction	= 0;
