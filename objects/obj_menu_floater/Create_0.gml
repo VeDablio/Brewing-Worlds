@@ -22,4 +22,4 @@ rot_speed	= random_range(-2, 2);
 image_xscale	= random_range(0.8, 1.2);
 image_yscale	= image_xscale;
 
-image_alpha		= 0.6;
+image_alpha		= 0.85;

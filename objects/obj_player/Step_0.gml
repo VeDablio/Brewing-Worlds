@@ -1,3 +1,8 @@
+if(keyboard_check_pressed(vk_enter)){
+	room_goto(rm_menu);
+	audio_pause_all();
+}
+
 // Mudando de mundo se apertar espaço
 if(keyboard_check_pressed(vk_space)){
 	global.current_area = !global.current_area;
