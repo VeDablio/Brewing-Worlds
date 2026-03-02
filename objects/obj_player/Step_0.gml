@@ -61,16 +61,8 @@ if(game_state == "playing"){
 }else if(game_state == "finished"){
 	// Ao apertar espaço
 	if(keyboard_check_pressed(vk_enter)){
-		// Se o resultado do dia for vitoria
-		if(day_result == "win"){
-			// Aumentar dia, quota e clientes maximos
-			game_restart();	// Jogo recomeça
-
-		// Caso o resultado não seja vitoria
-		}else{
-			// Fazer animação de derrota
-			game_restart();	// Jogo recomeça
-		}
+		room_goto(rm_menu);
+		audio_pause_all();
 	}
 }
 
